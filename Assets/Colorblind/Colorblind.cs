@@ -1,4 +1,15 @@
-﻿using UnityEngine;
+﻿/** Color Blindness Simulator.
+  * 
+  * This script (and attached shader) can be used to simulate color blindness in Unity. 
+  * To use, attach the script to a camera. A drop-down in the inspector can be used to
+  * configure which form of color blindness is being simulated. Deuteranopia is the most
+  * common form.
+  *
+  * Note: this color blindness simulation is very different from Daltonization, which
+  * is used to help color-blind people see color differences more accurately.
+**/
+
+using UnityEngine;
 using System.Collections;
 [ExecuteInEditMode]
 public class Colorblind : MonoBehaviour
@@ -19,10 +30,9 @@ public class Colorblind : MonoBehaviour
 
     private Material material;
 
-    // Creates a private material used to the effect
     void Awake()
     {
-        material = new Material(Shader.Find("Hidden/opiaDiffuse"));
+        material = new Material(Shader.Find("Hidden/MatrixShader"));
     }
 
     // Postprocess the image

@@ -1,4 +1,4 @@
-﻿Shader "Hidden/opiaDiffuse" {
+﻿Shader "Hidden/MatrixShader" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_rg("Red -> Green", Range(-1, 1)) = 0
